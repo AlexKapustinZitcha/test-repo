@@ -3,7 +3,7 @@ on: pull_request
 name: Pull Request
 
 jobs:
-  message-check:
+  limit_pr:
     name: Block Merge Commits
 
     runs-on: ubuntu-latest

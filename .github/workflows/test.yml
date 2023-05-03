@@ -1,0 +1,17 @@
+name: Testing
+
+on:
+  pull_request:
+    branches:
+      - master
+      - develop
+jobs:
+  limit_pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "step 1"
+        run: printenv
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: step2
+        run: php -r "exit(1);"
